@@ -1,7 +1,6 @@
 //
 //  PostTutorialSetCell.swift
 //  Profile
-//
 //  Created by Арсений Гулевич  on 15.12.2023.
 //
 

@@ -1,7 +1,6 @@
 //
 //  IdeasVC.swift
 //  Profile
-//
 //  Created by Арсений Гулевич  on 13.12.2023.
 //
 
@@ -16,6 +15,13 @@ class IdeasViewController: UIViewController {
     }
     
     private var tableView = UITableView()
+    
+    private let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.tintColor = UIColor.black
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        return button
+    }()
     
     private let coverView: UIImageView = {
         let image = UIImageView()
@@ -71,17 +77,20 @@ class IdeasViewController: UIViewController {
 private extension IdeasViewController {
     func initialize() {
         view.backgroundColor = .red
-        
-//        navigationController?.navigationBar.tintColor = .black
-//        let coverImage = UIImage(named: "pageCoverImageForIdeas")
-//        let imageView = UIImageView(image: coverImage)
-//        navigationItem.titleView = imageView
-        
+       
         view.addSubview(coverView)
         coverView.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.height.equalTo(357)
-            make.width.equalTo(208)
+            make.height.equalTo(208)
+            make.width.equalToSuperview()
+        }
+        
+        view.addSubview(nextButton)
+        nextButton.snp.makeConstraints { make in
+            make.top.equalTo(coverView.snp.bottom)
+            make.height.equalTo(20)
+            make.width.equalTo(20)
+            make.centerX.equalToSuperview()
         }
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,13 +99,13 @@ private extension IdeasViewController {
         tableView.register(PostIdeaSetCell.self, forCellReuseIdentifier: String(describing: PostIdeaSetCell.self))
         
         view.addSubview(tableView)
-        
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-            make.top.equalTo(coverView.snp.bottom)
+            make.top.equalTo(nextButton.snp.bottom)
         }
+        
+        
     }
-    
     
 }
 
@@ -104,6 +113,13 @@ extension IdeasViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         items.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+        let ideaVC = IdeaViewController()
+        ideaVC.item = item
+        navigationController?.pushViewController(ideaVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

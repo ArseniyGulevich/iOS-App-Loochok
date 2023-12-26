@@ -8,14 +8,14 @@
 import SnapKit
 import UIKit
 
-class CoverView: UIView {
-    
-    func configure(with info: IdeaItemCellInfo) {
-        
-    }
-    
-    func initialize() {
-        
-    }
-    
-}
+//class CoverView: UIView {
+//    
+//    func configure(with info: IdeaItemCellInfo) {
+//        
+//    }
+//    
+//    func initialize() {
+//        
+//    }
+//    
+//}

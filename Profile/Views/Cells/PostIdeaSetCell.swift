@@ -1,7 +1,6 @@
 //
 //  PostIdeaSetCell.swift
 //  Profile
-//
 //  Created by Арсений Гулевич  on 15.12.2023.
 //
 
@@ -67,6 +66,7 @@ class PostIdeaSetCell: UITableViewCell {
     private let likeButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = UIColor.black
+        button.setImage(UIImage(named: "heart"), for: .normal)
         button.setImage(UIImage(named: "heart"), for: .normal)
         return button
     }()
@@ -145,7 +145,11 @@ private extension PostIdeaSetCell {
             make.size.equalTo(45)
             make.bottom.equalToSuperview().inset(40)
         }
+    
 
     }
+    
+    
+    
 }
 

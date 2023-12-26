@@ -1,7 +1,6 @@
 //
 //  TabBarController.swift
 //  Profile
-//
 //  Created by Арсений Гулевич  on 15.12.2023.
 //
 
@@ -17,16 +16,15 @@ class TabBarController: UITabBarController {
         self.tabBar.overrideUserInterfaceStyle = .dark
         self.tabBar.barTintColor = Colors.black.uiColor
         self.tabBar.tintColor = Colors.white.uiColor
-//        self.tabBar.unselectedItemTintColor = Colors.lightGray.uiColor
     }
     
     private func setupTabs() {
         
         let ideas = self.createNav(with: "Идеи", image: UIImage(systemName: "lightbulb.circle"), vc: IdeasViewController()) // lightbulb.min  // brain.head.profile
-        let tutorials = self.createNav(with: "Туториалы", image: UIImage(systemName: "list.bullet.rectangle"), vc: TutorialsViewController())
+        let tutorials = self.createNav(with: "Туториалы", image: UIImage(systemName: "book.fill"), vc: TutorialsViewController())
         let add = self.createNav(with: "Добавить", image: UIImage(named: "AddButtonImage" ), vc: TutorialsViewController())
-        let explore = self.createNav(with: "Для вас", image: UIImage(systemName: "magnifyingglass"), vc: ExploreViewController())
-        let profile = self.createNav(with: "Профиль", image: UIImage(systemName: "person.crop.circle"), vc: ProfileViewController())
+        let explore = self.createNav(with: "Для вас", image: UIImage(systemName: "magnifyingglass.circle.fill"), vc: ExploreViewController())
+        let profile = self.createNav(with: "Профиль", image: UIImage(systemName: "person.crop.square.fill"), vc: ProfileViewController())
         self.setViewControllers([ideas, tutorials, add, explore, profile], animated: true)
     }
     

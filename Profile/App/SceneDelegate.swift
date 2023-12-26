@@ -15,7 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = TabBarController() // IdeasViewController() // RegistrationViewController() // AboutViewController() // ProfileViewController() // WeatherVC() // LentaTVC()
+        window.rootViewController = TabBarController() // RegistrationViewController() // AboutViewController() // ProfileViewController() // WeatherVC() // LentaTVC()
+//        window.rootViewController = UINavigationController(rootViewController: IdeasViewController())
         self.window = window
         window.makeKeyAndVisible()
     }

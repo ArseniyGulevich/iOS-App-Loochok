@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		342DC0592B2CACDB00FFA7AD /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DC0582B2CACDB00FFA7AD /* ImagePickerController.swift */; };
-		342DC05B2B2CDD8500FFA7AD /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DC05A2B2CDD8500FFA7AD /* MainScreen.swift */; };
 		342DC05F2B2CE2AE00FFA7AD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DC05E2B2CE2AE00FFA7AD /* TabBarController.swift */; };
 		342DC0612B2D915000FFA7AD /* TutorialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DC0602B2D915000FFA7AD /* TutorialsViewController.swift */; };
-		342DC0632B2D930D00FFA7AD /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DC0622B2D930D00FFA7AD /* ExploreViewController.swift */; };
 		342DC0652B2DBE4F00FFA7AD /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DC0642B2DBE4F00FFA7AD /* CoverView.swift */; };
+		342DC0672B399CA300FFA7AD /* IdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DC0662B399CA300FFA7AD /* IdeaViewController.swift */; };
+		342DC0692B3B214500FFA7AD /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DC0682B3B214500FFA7AD /* ExploreViewController.swift */; };
 		34900A882B275C190055D45E /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34900A872B275C190055D45E /* PostModel.swift */; };
 		34900A902B2A1E580055D45E /* IdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34900A8F2B2A1E580055D45E /* IdeasViewController.swift */; };
 		34900A922B2A48D00055D45E /* IdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34900A912B2A48D00055D45E /* IdeasView.swift */; };
@@ -24,7 +24,6 @@
 		34900AA02B2C9A0B0055D45E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 34900A9F2B2C9A0B0055D45E /* SnapKit */; };
 		3F1FF9E42AF2773400899B12 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FF9E32AF2773400899B12 /* Constants.swift */; };
 		3F1FF9E92AF28A3100899B12 /* ProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FF9E82AF28A3100899B12 /* ProfileDelegate.swift */; };
-		3F8B9EAF2B04E9580061AD98 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B9EAE2B04E9580061AD98 /* WeatherVC.swift */; };
 		3F8B9EB12B04ED590061AD98 /* WeatherM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B9EB02B04ED590061AD98 /* WeatherM.swift */; };
 		3F8B9EB32B0502F00061AD98 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B9EB22B0502F00061AD98 /* UIImageViewExtension.swift */; };
 		3FE6BA932AFBB3B30091F52B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6BA922AFBB3B30091F52B /* AboutViewController.swift */; };
@@ -46,11 +45,11 @@
 
 /* Begin PBXFileReference section */
 		342DC0582B2CACDB00FFA7AD /* ImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
-		342DC05A2B2CDD8500FFA7AD /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		342DC05E2B2CE2AE00FFA7AD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		342DC0602B2D915000FFA7AD /* TutorialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsViewController.swift; sourceTree = "<group>"; };
-		342DC0622B2D930D00FFA7AD /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		342DC0642B2DBE4F00FFA7AD /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
+		342DC0662B399CA300FFA7AD /* IdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaViewController.swift; sourceTree = "<group>"; };
+		342DC0682B3B214500FFA7AD /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		34900A872B275C190055D45E /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		34900A8F2B2A1E580055D45E /* IdeasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasViewController.swift; sourceTree = "<group>"; };
 		34900A912B2A48D00055D45E /* IdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasView.swift; sourceTree = "<group>"; };
@@ -61,7 +60,6 @@
 		34900A9C2B2C70490055D45E /* PostTutorialSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTutorialSetCell.swift; sourceTree = "<group>"; };
 		3F1FF9E32AF2773400899B12 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F1FF9E82AF28A3100899B12 /* ProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDelegate.swift; sourceTree = "<group>"; };
-		3F8B9EAE2B04E9580061AD98 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		3F8B9EB02B04ED590061AD98 /* WeatherM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherM.swift; sourceTree = "<group>"; };
 		3F8B9EB22B0502F00061AD98 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		3FE6BA922AFBB3B30091F52B /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +151,7 @@
 		DA0A0C332A21087500AABA86 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				3FE6BA912AFBB2FA0091F52B /* App */,
 				3FE6BA942AFBB4A50091F52B /* Helpers */,
 				DA0A0C532A21127A00AABA86 /* ProfileStorage */,
 				DA0A0C502A210A3D00AABA86 /* Controllers */,
@@ -164,7 +163,6 @@
 				DA0A0C3F2A21087600AABA86 /* LaunchScreen.storyboard */,
 				DA0A0C422A21087600AABA86 /* Info.plist */,
 				DA0A0C4E2A21096C00AABA86 /* README.md */,
-				3FE6BA912AFBB2FA0091F52B /* App */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -196,7 +194,6 @@
 				34900A992B2C6FC00055D45E /* Cells */,
 				DA0A0C512A210A4E00AABA86 /* ProfileView.swift */,
 				34900A912B2A48D00055D45E /* IdeasView.swift */,
-				342DC05A2B2CDD8500FFA7AD /* MainScreen.swift */,
 				342DC0642B2DBE4F00FFA7AD /* CoverView.swift */,
 			);
 			path = Views;
@@ -208,12 +205,12 @@
 				342DC0582B2CACDB00FFA7AD /* ImagePickerController.swift */,
 				3FE6BA922AFBB3B30091F52B /* AboutViewController.swift */,
 				3FE6BA992AFBC3830091F52B /* RegistrationViewController.swift */,
-				3F8B9EAE2B04E9580061AD98 /* WeatherVC.swift */,
 				342DC05E2B2CE2AE00FFA7AD /* TabBarController.swift */,
 				34900A8F2B2A1E580055D45E /* IdeasViewController.swift */,
+				342DC0662B399CA300FFA7AD /* IdeaViewController.swift */,
 				342DC0602B2D915000FFA7AD /* TutorialsViewController.swift */,
 				DA0A0C382A21087500AABA86 /* ProfileViewController.swift */,
-				342DC0622B2D930D00FFA7AD /* ExploreViewController.swift */,
+				342DC0682B3B214500FFA7AD /* ExploreViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -307,12 +304,12 @@
 				34900A982B2C66AB0055D45E /* TutirialItemCellInfo.swift in Sources */,
 				DA0A0C4D2A21093B00AABA86 /* ProfileModel.swift in Sources */,
 				3FE6BA932AFBB3B30091F52B /* AboutViewController.swift in Sources */,
+				342DC0672B399CA300FFA7AD /* IdeaViewController.swift in Sources */,
 				342DC0652B2DBE4F00FFA7AD /* CoverView.swift in Sources */,
 				DA0A0C392A21087500AABA86 /* ProfileViewController.swift in Sources */,
 				34900A942B2C649D0055D45E /* PostItemType.swift in Sources */,
 				DA0A0C352A21087500AABA86 /* AppDelegate.swift in Sources */,
 				34900A922B2A48D00055D45E /* IdeasView.swift in Sources */,
-				342DC05B2B2CDD8500FFA7AD /* MainScreen.swift in Sources */,
 				3F8B9EB12B04ED590061AD98 /* WeatherM.swift in Sources */,
 				3FE6BA982AFBB5BE0091F52B /* UIColor.swift in Sources */,
 				342DC0592B2CACDB00FFA7AD /* ImagePickerController.swift in Sources */,
@@ -322,11 +319,10 @@
 				DA0A0C552A21129600AABA86 /* ProfileStorageLogic.swift in Sources */,
 				34900A9B2B2C6FDE0055D45E /* PostIdeaSetCell.swift in Sources */,
 				DA0A0C572A2112A700AABA86 /* ProfileStorageWorker.swift in Sources */,
+				342DC0692B3B214500FFA7AD /* ExploreViewController.swift in Sources */,
 				3FE6BA962AFBB4BE0091F52B /* Colors.swift in Sources */,
-				342DC0632B2D930D00FFA7AD /* ExploreViewController.swift in Sources */,
 				DA0A0C522A210A4E00AABA86 /* ProfileView.swift in Sources */,
 				34900A9D2B2C70490055D45E /* PostTutorialSetCell.swift in Sources */,
-				3F8B9EAF2B04E9580061AD98 /* WeatherVC.swift in Sources */,
 				3FE6BA9A2AFBC3830091F52B /* RegistrationViewController.swift in Sources */,
 				342DC05F2B2CE2AE00FFA7AD /* TabBarController.swift in Sources */,
 				342DC0612B2D915000FFA7AD /* TutorialsViewController.swift in Sources */,
