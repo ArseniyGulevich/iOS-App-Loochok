@@ -10,7 +10,7 @@ class AboutViewController: UIViewController
         let label = UILabel()
         label.text = "О проекте"
         label.textColor = Colors.black.uiColor
-        label.font = Constants.fontH1
+        label.font = Constants.heading1Font
         
         return label
     }()
@@ -41,7 +41,7 @@ class AboutViewController: UIViewController
         aboutLabel.numberOfLines = 0
         aboutLabel.textColor = Colors.black.uiColor
         aboutLabel.translatesAutoresizingMaskIntoConstraints = false
-        aboutLabel.font = Constants.fontP
+        aboutLabel.font = Constants.paragraphFont
         aboutLabel.text = """
         Loochok — медиа-сервис про кастомизацию предметов одежды, обуви и аксессуаров.
         Здесь вы найдёте ленту с идеями для кастомов,

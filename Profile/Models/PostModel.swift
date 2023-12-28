@@ -3,36 +3,29 @@
 //  Profile
 //
 
-//import Foundation
-//
-//public struct ProfileModel
-//{
-//    let avatar: String?// Аватар
-//    let firstName: String // Имя
-//    let secondName: String // Фамилия
-//    let middleName: String // Отчество
-//    let alias: String // Никнейм
-//    let mail: String // Имейл
-//    let phone: String // Телефон
-//    let telegram: String // Телеграм
-//
-//    public init(
-//        avatar: String? = nil,
-//        firstName: String = "",
-//        secondName: String = "",
-//        middleName: String = "",
-//        alias: String = "",
-//        mail: String = "",
-//        phone: String = "",
-//        telegram: String = ""
-//    ) {
-//        self.avatar = avatar
-//        self.firstName = firstName
-//        self.secondName = secondName
-//        self.middleName = middleName
-//        self.alias = alias
-//        self.mail = mail
-//        self.phone = phone
-//        self.telegram = telegram
-//    }
-//}
+import Foundation
+
+public struct PostModel {
+    let id: Int
+    let userId: Int
+    let createdAt: String
+    let type: String
+    let title: String
+    let description: String
+    let postImage: String
+    let categoryIds: [Int]
+    let tagIds: [Int]
+
+    public init(id: Int, userId: Int, createdAt: String, type: String, title: String, description: String, postImage: String, categoryIds: [Int], tagIds: [Int]) {
+        self.id = id
+        self.userId = userId
+        self.createdAt = createdAt
+        self.type = type
+        self.title = title
+        self.description = description
+        self.postImage = postImage
+        self.categoryIds = categoryIds
+        self.tagIds = tagIds
+    }
+    
+}

@@ -29,7 +29,7 @@ import UIKit
 //    
 //    private func setupTitleLabel() {
 //        titleLabel.text = "Регистрация"
-//        titleLabel.font = Constants.fontH1
+//        titleLabel.font = Constants.heading1Font
 //        titleLabel.textAlignment = .center
 //        view.addSubview(titleLabel)
 //        

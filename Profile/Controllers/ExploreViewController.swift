@@ -9,5 +9,16 @@ import SnapKit
 import UIKit
 
 class ExploreViewController: UIViewController {
-     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initialize()
+    }
+}
+
+extension ExploreViewController {
+    
+    func initialize() {
+        view.backgroundColor = Colors.white.uiColor
+    }
+    
 }

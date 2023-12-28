@@ -38,13 +38,13 @@ class PostIdeaSetCell: UITableViewCell {
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
-        label.font = Constants.fontP
+        label.font = Constants.paragraphFont
         return label
     }()
     
     private let nicknameLabel: UILabel = {
         let label = UILabel()
-        label.font = Constants.fontP
+        label.font = Constants.paragraphFont
         label.textColor = UIColor.lightGray
         return label
     }()
@@ -80,7 +80,7 @@ class PostIdeaSetCell: UITableViewCell {
     
     private let likesLabel: UILabel = {
         let label = UILabel()
-        label.font = Constants.fontP
+        label.font = Constants.paragraphFont
         label.textColor = UIColor.blue
         return label
     }()
@@ -89,12 +89,13 @@ class PostIdeaSetCell: UITableViewCell {
 
 private extension PostIdeaSetCell {
     func initialize() {
-        selectionStyle = .none
+        selectionStyle = .default
         
-        contentView.backgroundColor = Colors.lightGray.uiColor
+        contentView.backgroundColor = Colors.lightGray1.uiColor
         contentView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.equalToSuperview()
+//            make.height.equalTo(backgroundShape.snp.height).inset(15)
         }
 
         contentView.addSubview(backgroundShape)
@@ -106,25 +107,24 @@ private extension PostIdeaSetCell {
         backgroundShape.layer.cornerRadius = 28
         backgroundShape.layer.shadowRadius = 20
         backgroundShape.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.width.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.top.equalToSuperview()//.inset(10)
+            make.horizontalEdges.equalToSuperview().inset(Constants.inset15)
+            make.bottom.equalToSuperview().inset(Constants.inset12)
         }
         backgroundShape.layer.shadowColor = UIColor.black.cgColor
         backgroundShape.layer.shadowOpacity = 0.08
-        backgroundShape.layer.shadowOffset = .zero
-        backgroundShape.layer.shadowRadius = 10
-        
+        backgroundShape.layer.shadowOffset = CGSize(width: 0, height: 4)
+        backgroundShape.layer.shadowRadius = 5        
         
         postImageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(Constants.inset8)
-            make.top.equalToSuperview().inset(Constants.inset8)
-            make.width.equalToSuperview().inset(Constants.inset8)
+            make.top.equalTo(backgroundShape).inset(Constants.inset8)
+            make.centerX.equalTo(backgroundShape.snp.centerX)
+            make.width.equalTo(backgroundShape.snp.width).inset(Constants.inset8)
             make.height.equalTo(314)
         }
         
         userImageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(Constants.inset8)
+            make.leading.equalTo(backgroundShape.snp.leading).inset(Constants.inset15)
             make.top.equalTo(postImageView.snp.bottom).offset(Constants.inset20 / 2)
             make.size.equalTo(UIConstants.UserImageSize)
         }
@@ -136,13 +136,13 @@ private extension PostIdeaSetCell {
         contentView.addSubview(namesStack)
         namesStack.snp.makeConstraints { make in
             make.centerY.equalTo(userImageView)
-            make.leading.equalTo(userImageView.snp.trailing).offset(Constants.inset20)
+            make.leading.equalTo(userImageView.snp.trailing).offset(Constants.inset12)
         }
 
         likeButton.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(Constants.inset20)
+            make.trailing.equalTo(backgroundShape.snp.trailing).inset(Constants.inset8)
             make.centerY.equalTo(userImageView)
-            make.size.equalTo(45)
+            make.size.equalTo(36)
             make.bottom.equalToSuperview().inset(40)
         }
     

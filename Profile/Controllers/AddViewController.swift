@@ -1,23 +1,22 @@
 //
-//  TutorialsViewController.swift
+//  AddViewController.swift
 //  Profile
 //
-//  Created by Арсений Гулевич  on 16.12.2023.
+//  Created by Арсений Гулевич  on 27.12.2023.
 //
 
-import SnapKit
 import UIKit
 
-class TutorialsViewController: UIViewController {
-    
+class AddViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
     }
-    
+
 }
 
-extension TutorialsViewController {
+extension AddViewController {
     
     func initialize() {
         view.backgroundColor = Colors.white.uiColor

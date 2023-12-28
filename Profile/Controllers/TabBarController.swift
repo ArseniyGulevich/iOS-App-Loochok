@@ -15,16 +15,38 @@ class TabBarController: UITabBarController {
         self.tabBar.backgroundColor = Colors.black.uiColor
         self.tabBar.overrideUserInterfaceStyle = .dark
         self.tabBar.barTintColor = Colors.black.uiColor
-        self.tabBar.tintColor = Colors.white.uiColor
+        self.tabBar.tintColor = Colors.lightYellow.uiColor
+        self.tabBar.unselectedItemTintColor = Colors.lightGray2.uiColor
     }
     
     private func setupTabs() {
         
-        let ideas = self.createNav(with: "Идеи", image: UIImage(systemName: "lightbulb.circle"), vc: IdeasViewController()) // lightbulb.min  // brain.head.profile
-        let tutorials = self.createNav(with: "Туториалы", image: UIImage(systemName: "book.fill"), vc: TutorialsViewController())
-        let add = self.createNav(with: "Добавить", image: UIImage(named: "AddButtonImage" ), vc: TutorialsViewController())
-        let explore = self.createNav(with: "Для вас", image: UIImage(systemName: "magnifyingglass.circle.fill"), vc: ExploreViewController())
-        let profile = self.createNav(with: "Профиль", image: UIImage(systemName: "person.crop.square.fill"), vc: ProfileViewController())
+        // MARK: - Resizing
+        let targetSize = CGSize(width: 32, height: 32)
+        
+        let ideasImage = UIImage(named: "ideasIcon")?
+            .withRenderingMode(.alwaysOriginal)
+            .scalePreservingAspectRatio(targetSize: targetSize)
+        let tutorialsImage = UIImage(named: "tutorialsIcon")?
+            .withRenderingMode(.alwaysOriginal)
+            .scalePreservingAspectRatio(targetSize: targetSize)
+        let addImage = UIImage(named: "addIcon")?
+            .withRenderingMode(.alwaysOriginal)
+            .scalePreservingAspectRatio(targetSize: targetSize)
+        let exploreImage = UIImage(named: "searchIcon")?
+            .withRenderingMode(.alwaysOriginal)
+            .scalePreservingAspectRatio(targetSize: targetSize)
+        let profileImage = UIImage(named: "profileIcon")?
+            .withRenderingMode(.alwaysOriginal)
+            .scalePreservingAspectRatio(targetSize: targetSize)
+        
+        
+        // MARK: - Creating Navs
+        let ideas = self.createNav(with: "Идеи", image: ideasImage, vc: IdeasViewController()) // lightbulb.min  // brain.head.profile
+        let tutorials = self.createNav(with: "Туториалы", image: tutorialsImage, vc: TutorialsViewController())
+        let add = self.createNav(with: "Добавить", image: addImage, vc: AddViewController())
+        let explore = self.createNav(with: "Для вас", image: exploreImage, vc: ExploreViewController())
+        let profile = self.createNav(with: "Профиль", image: profileImage, vc: ProfileViewController())
         self.setViewControllers([ideas, tutorials, add, explore, profile], animated: true)
     }
     
@@ -32,7 +54,8 @@ class TabBarController: UITabBarController {
         let nav = UINavigationController(rootViewController: vc)
         nav.tabBarItem.title = title
         nav.tabBarItem.image = image
-        nav.viewControllers.first?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Btn", style: .plain, target: nil, action: nil)
+//        nav.viewControllers.first?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "next", style: .plain, target: nil, action: nil)
+//        nav.viewControllers.first?.navigationItem.title = title
         return nav
     }
 }

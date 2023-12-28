@@ -4,8 +4,7 @@
 //
 import Foundation
 
-public struct ProfileModel
-{
+public struct ProfileModel {
     let avatar: String?// Аватар
     let firstName: String // Имя
     let secondName: String // Фамилия

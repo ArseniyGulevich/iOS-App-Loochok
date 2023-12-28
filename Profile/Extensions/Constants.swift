@@ -5,12 +5,20 @@
 import UIKit
 
 public struct Constants {
+    
     static let cellId = "CellId"
+    
+    // MARK: Insets
     static let inset20: Double = 20.0
     static let inset15: Double = 15.0
+    static let inset12: Double = 12.0
     static let inset8: Double = 8.0
-    static let fontH1: UIFont = .systemFont(ofSize: 42, weight: .semibold)
-    static let fontH2: UIFont = .systemFont(ofSize: 24, weight: .bold)
-    static let fontP: UIFont = .systemFont(ofSize: 16, weight: .regular)
-    static let fontButtons: UIFont = .systemFont(ofSize: 16, weight: .semibold)
+    
+    // MARK: Font Styles
+    static let heading1Font: UIFont = .suisseIntlSemibold(size: 42)
+    static let heading2Font: UIFont = .suisseIntlSemibold(size: 32)
+    static let heading3Font: UIFont = .suisseIntlSemibold(size: 24)
+    static let paragraphFont: UIFont = .suisseIntlMedium(size: 16)
+    static let buttonsFont: UIFont = .suisseIntlSemibold(size: 16)
+    
 }
