@@ -43,7 +43,7 @@ class TabBarController: UITabBarController {
         
         // MARK: - Creating Navs
         let ideas = self.createNav(with: "Идеи", image: ideasImage, vc: IdeasVC()) // lightbulb.min  // brain.head.profile
-        let tutorials = self.createNav(with: "Туториалы", image: tutorialsImage, vc: TutorialsViewController())
+        let tutorials = self.createNav(with: "Туториалы", image: tutorialsImage, vc: TutorialsVC())
         let add = self.createNav(with: "Добавить", image: addImage, vc: AddViewController())
         let explore = self.createNav(with: "Для вас", image: exploreImage, vc: ExploreViewController())
         let profile = self.createNav(with: "Профиль", image: profileImage, vc: ProfileViewController())

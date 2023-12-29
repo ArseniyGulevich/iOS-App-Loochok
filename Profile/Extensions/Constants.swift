@@ -20,6 +20,7 @@ public struct Constants {
     static let heading1Font: UIFont = .suisseIntlSemibold(size: 42)
     static let heading2Font: UIFont = .suisseIntlSemibold(size: 32)
     static let heading3Font: UIFont = .suisseIntlSemibold(size: 24)
+    static let heading4Font: UIFont = .suisseIntlMedium(size: 21)
     static let paragraph1Font: UIFont = .suisseIntlMedium(size: 16)
     static let buttonsFont: UIFont = .suisseIntlSemibold(size: 16)
     static let paragraph2Font: UIFont = .suisseIntlRegular(size: 16)

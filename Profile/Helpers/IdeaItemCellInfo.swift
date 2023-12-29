@@ -11,7 +11,7 @@ struct IdeaItemCellInfo {
     let username: String
     let nickname: String
     let postImage: UIImage
-    let tags: [String]
+    let tags: [String]?
     let numberOfLikes: Int
     let comment: CommentShortInfo?
     let title: String?

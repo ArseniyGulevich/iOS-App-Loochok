@@ -14,6 +14,7 @@ class PostIdeaSetCell: UITableViewCell {
         nicknameLabel.text = info.nickname
         postImageView.image = info.postImage
         likesLabel.text = "\(info.numberOfLikes)"
+//        tagButton.titleLabel?.text = info.tags[0]
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -67,12 +68,16 @@ class PostIdeaSetCell: UITableViewCell {
         return button
     }()
     
-    private let commentButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.tintColor = UIColor.black
-        button.setImage(UIImage(systemName: "heart"), for: .normal)
-        return button
-    }()
+//    private let tagButtons: [UIButton] = {
+//        let buttons: [UIButton]
+//
+//        UIButton(type: .roundedRect)
+//        buttons.tintColor = Colors.black.uiColor
+//        buttons.titleLabel?.text =
+//        buttons.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
+//
+//        return buttons
+//    }()
     
     private let likesLabel: UILabel = {
         let label = UILabel()
@@ -91,19 +96,18 @@ private extension PostIdeaSetCell {
         contentView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.equalToSuperview()
-//            make.height.equalTo(backgroundShape.snp.height).inset(15)
         }
 
         contentView.addSubview(backgroundShape)
         contentView.addSubview(userImageView)
         contentView.addSubview(postImageView)
         contentView.addSubview(likeButton)
-        contentView.addSubview(commentButton)
+//        contentView.addSubview(tagButton)
         
         backgroundShape.layer.cornerRadius = 28
         backgroundShape.layer.shadowRadius = 20
         backgroundShape.snp.makeConstraints { make in
-            make.top.equalToSuperview()//.inset(10)
+            make.top.equalToSuperview()
             make.horizontalEdges.equalToSuperview().inset(Constants.inset15)
             make.bottom.equalToSuperview().inset(Constants.inset12)
         }
@@ -141,6 +145,11 @@ private extension PostIdeaSetCell {
             make.size.equalTo(36)
             make.bottom.equalToSuperview().inset(40)
         }
+        
+//        tagButton.snp.makeConstraints { make in
+//            make.top.equalTo(tagButton.snp.bottom)
+//            make.leading.equalTo(backgroundShape.snp.leading).inset(Constants.inset12)
+//        }
 
     }
     

@@ -7,11 +7,12 @@
 import UIKit
 
 struct TutirialItemCellInfo {
-    let postTitle: String
+    let title: String
     let userImage: UIImage
     let username: String
     let nickname: String
     let postImage: UIImage
-    let tags: [String]
+    let tags: [String]?
     let numberOfLikes: Int
+    let createdAt: String
 }
