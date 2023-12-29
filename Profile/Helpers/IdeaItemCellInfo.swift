@@ -14,6 +14,9 @@ struct IdeaItemCellInfo {
     let tags: [String]
     let numberOfLikes: Int
     let comment: CommentShortInfo?
+    let title: String?
+    let description: String?
+    let createdAt: String
 }
 
 struct CommentShortInfo {

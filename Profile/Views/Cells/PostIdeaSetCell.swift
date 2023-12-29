@@ -25,26 +25,22 @@ class PostIdeaSetCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private enum UIConstants {
-        static let UserImageSize: CGFloat = 45
-    }
-    
     private let userImageView: UIImageView = {
         let view = UIImageView()
-        view.layer.cornerRadius = UIConstants.UserImageSize / 2
+        view.layer.cornerRadius = Constants.userImageSize / 2
         view.clipsToBounds = true
         return view
     }()
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
-        label.font = Constants.paragraphFont
+        label.font = Constants.paragraph1Font
         return label
     }()
     
     private let nicknameLabel: UILabel = {
         let label = UILabel()
-        label.font = Constants.paragraphFont
+        label.font = Constants.paragraph1Font
         label.textColor = UIColor.lightGray
         return label
     }()
@@ -80,7 +76,7 @@ class PostIdeaSetCell: UITableViewCell {
     
     private let likesLabel: UILabel = {
         let label = UILabel()
-        label.font = Constants.paragraphFont
+        label.font = Constants.paragraph1Font
         label.textColor = UIColor.blue
         return label
     }()
@@ -126,7 +122,7 @@ private extension PostIdeaSetCell {
         userImageView.snp.makeConstraints { make in
             make.leading.equalTo(backgroundShape.snp.leading).inset(Constants.inset15)
             make.top.equalTo(postImageView.snp.bottom).offset(Constants.inset20 / 2)
-            make.size.equalTo(UIConstants.UserImageSize)
+            make.size.equalTo(Constants.userImageSize)
         }
         
         let namesStack = UIStackView()
@@ -145,11 +141,8 @@ private extension PostIdeaSetCell {
             make.size.equalTo(36)
             make.bottom.equalToSuperview().inset(40)
         }
-    
 
     }
-    
-    
     
 }
 

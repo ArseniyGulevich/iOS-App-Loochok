@@ -8,7 +8,7 @@ import SnapKit
 import UIKit
 import CoreData
 
-class IdeasViewController: UIViewController {
+class IdeasVC: UIViewController {
     
 //    static var applicationDelegat = UIApplication.shared.delegate as! AppDelegate
 //    let context = applicationDelegat.persistentContainer.viewContext
@@ -16,6 +16,7 @@ class IdeasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+        tableView.delegate = self
 //        addData(name: "Ivanov")
 //        let res: [User] = getData()
 //        print(res[0].name, res[0].id)
@@ -39,6 +40,7 @@ class IdeasViewController: UIViewController {
 //        return result
 //    }
 //
+    
     private var tableView = UITableView()
     
     private let nextButton: UIButton = {
@@ -62,83 +64,90 @@ class IdeasViewController: UIViewController {
         label.backgroundColor = Colors.black.uiColor
         return label
     }()
-    
-//    let coverView: CoverView
-    
-    private var posts: [PostITemType] = [
-        .idea(IdeaItemCellInfo(
-            userImage: UIImage(named: "userImage1")!,
-            username: "Юзер Юзеровов",
-            nickname: "@sexy_procrastinator",
-            postImage: UIImage(named: "postImage1")!,
-            tags: ["тэг1", "тэг2"],
-            numberOfLikes: 12,
-            comment: nil)),
-        .idea(IdeaItemCellInfo(
-            userImage: UIImage(named: "DefaultAvatar")!,
-            username: "Владимир Путин",
-            nickname: "@vlad.kgb.is.cool",
-            postImage: UIImage(named: "Image3")!,
-            tags: ["тэг8", "тэг3", "тэг2", "тэг20"],
-            numberOfLikes: 12,
-            comment: nil)),
-        .idea(IdeaItemCellInfo(
-            userImage: UIImage(named: "DefaultAvatar")!,
-            username: "Псевдоним Фамилиевич",
-            nickname: "@ewgrhetjky5_0",
-            postImage: UIImage(named: "Image4")!,
-            tags: ["тэг1", "тэг2"],
-            numberOfLikes: 12,
-            comment: nil)),
-        .idea(IdeaItemCellInfo(
-            userImage: UIImage(named: "DefaultAvatar")!,
-            username: "Дикий Кринж",
-            nickname: "@cringyguygoy",
-            postImage: UIImage(named: "Image5")!,
-            tags: ["тэг6", "тэг2", "тэг3", "тэг2", "тэг19"],
-            numberOfLikes: 12,
-            comment: nil)),
-        .idea(IdeaItemCellInfo(
-            userImage: UIImage(named: "userImage2")!,
-            username: "Очередной Пользователь",
-            nickname: "@andandand444me",
-            postImage: UIImage(named: "Image6")!,
-            tags: ["тэг14", "тэг5"],
-            numberOfLikes: 5,
-            comment: nil))
-    ]
-    
+        
     private var postCards: [IdeaItemCellInfo] = [
         IdeaItemCellInfo(
             userImage: UIImage(named: "userImage1")!,
-            username: "Юзер Юзеровов",
-            nickname: "@sexy_procrastinator",
-            postImage: UIImage(named: "postImage1")!,
+            username: "Ivanchai",
+            nickname: "@vno_vno",
+            postImage: UIImage(named: "Image7")!,
+            tags: ["тэг1", "тэг15"],
+            numberOfLikes: 12,
+            comment: nil,
+            title: "Так-так-так!",
+            description: "Вот такой кастом",
+            createdAt: "сегодня в 10:05"),
+        IdeaItemCellInfo(
+            userImage: UIImage(named: "DefaultAvatar")!,
+            username: "Елена Донских",
+            nickname: "@lena.don",
+            postImage: UIImage(named: "Image6")!,
+            tags: ["тэг13", "тэг2"],
+            numberOfLikes: 12,
+            comment: nil,
+            title: "Кастом кепочка",
+            description: "Эта кепочка просто секси!",
+            createdAt: "22 декабря"),
+        IdeaItemCellInfo(
+            userImage: UIImage(named: "DefaultAvatar")!,
+            username: "Gjkmpjdfntkm",
+            nickname: "@gjkmpj0j",
+            postImage: UIImage(named: "postImage2")!,
+            tags: ["тэг14", "тэг32", "тэг10", "тэг12", "тэг17", "тэг37"],
+            numberOfLikes: 12,
+            comment: nil,
+            title: "Название, тайтл тут",
+            description: nil,
+            createdAt: "сегодня в 4:15"),
+        IdeaItemCellInfo(
+            userImage: UIImage(named: "DefaultAvatar")!,
+            username: "Максим Шуфутинский",
+            nickname: "@max_baza_custom",
+            postImage: UIImage(named: "Image3")!,
             tags: ["тэг1", "тэг2"],
             numberOfLikes: 12,
-            comment: nil),
+            comment: nil,
+            title: "Название здесь",
+            description: "Описание идеи, доп. текстовая инфа",
+            createdAt: "сегодня в 10:20"),
         IdeaItemCellInfo(
             userImage: UIImage(named: "userImage1")!,
-            username: "Юзер Юзеровов",
-            nickname: "@sexy_procrastinator",
-            postImage: UIImage(named: "postImage1")!,
-            tags: ["тэг1", "тэг2"],
+            username: "Anastasia_Tur",
+            nickname: "@ansts.t",
+            postImage: UIImage(named: "Image4")!,
+            tags: ["тэг0"],
             numberOfLikes: 12,
-            comment: nil),
+            comment: nil,
+            title: "Some title",
+            description: nil,
+            createdAt: "сегодня в 11:09"),
         IdeaItemCellInfo(
-            userImage: UIImage(named: "userImage1")!,
-            username: "Юзер Юзеровов",
-            nickname: "@sexy_procrastinator",
-            postImage: UIImage(named: "postImage1")!,
-            tags: ["тэг1", "тэг2"],
+            userImage: UIImage(named: "DefaultAvatar")!,
+            username: "Volume",
+            nickname: "@v0lume",
+            postImage: UIImage(named: "Image5")!,
+            tags: ["тэг0", "тэг8"],
             numberOfLikes: 12,
-            comment: nil),
-        
+            comment: nil,
+            title: "Some title here",
+            description: "Дескрипшн",
+            createdAt: "позавчера"),
+        IdeaItemCellInfo(
+            userImage: UIImage(named: "userImage2")!,
+            username: "Имя пользователя",
+            nickname: "@imja.polzovoltelja",
+            postImage: UIImage(named: "postImage1")!,
+            tags: ["тэг6", "тэг5"],
+            numberOfLikes: 12,
+            comment: nil,
+            title: "Some title",
+            description: nil,
+            createdAt: "год назад")
     ]
     
 }
 
-private extension IdeasViewController {
+private extension IdeasVC {
     func initialize() {
         view.backgroundColor = Colors.lightGray1.uiColor
         
@@ -153,19 +162,10 @@ private extension IdeasViewController {
         view.addSubview(headingLabel)
         headingLabel.snp.makeConstraints {
             $0.top.equalTo(coverView.snp.bottom).offset(Constants.inset20)
-//            $0.leading.equalToSuperview()
             $0.height.equalTo(44)
             $0.width.equalToSuperview().inset(Constants.inset15)
             $0.centerX.equalToSuperview()
         }
-        
-//        view.addSubview(nextButton)
-//        nextButton.snp.makeConstraints { make in
-//            make.top.equalTo(coverView.snp.bottom)
-//            make.height.equalTo(20)
-//            make.width.equalTo(20)
-//            make.centerX.equalToSuperview()
-//        }
         
         tableView.backgroundColor = Colors.lightGray1.uiColor
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -184,16 +184,17 @@ private extension IdeasViewController {
     }
 }
 
-extension IdeasViewController: UITableViewDataSource {
+extension IdeasVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         postCards.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedPostCard = postCards[indexPath.row]
-        let postCardVC = PostCardViewController()
-        postCardVC.postCard = selectedPostCard
+        let post = postCards[indexPath.row]
+        let postCardVC = IdeaVC()
+        postCardVC.postCard = post
+        postCardVC.configure(with: post)
         navigationController?.pushViewController(postCardVC, animated: true)
     }
     
@@ -203,22 +204,5 @@ extension IdeasViewController: UITableViewDataSource {
         cell.configure(with: post)
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let item = posts[indexPath.row]
-//
-//        switch item {
-//
-//        case .idea(let info):
-//            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostIdeaSetCell.self), for: indexPath) as! PostIdeaSetCell
-//            cell.configure(with: info)
-//            return cell
-//
-//        case .tutorial(let tutorial):
-//            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostTutorialSetCell.self), for: indexPath) as! PostTutorialSetCell
-//            cell.configure(with: tutorial)
-//            return cell
-//        }
-//    }
     
 }

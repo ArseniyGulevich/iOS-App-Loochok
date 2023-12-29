@@ -42,7 +42,7 @@ class TabBarController: UITabBarController {
         
         
         // MARK: - Creating Navs
-        let ideas = self.createNav(with: "Идеи", image: ideasImage, vc: IdeasViewController()) // lightbulb.min  // brain.head.profile
+        let ideas = self.createNav(with: "Идеи", image: ideasImage, vc: IdeasVC()) // lightbulb.min  // brain.head.profile
         let tutorials = self.createNav(with: "Туториалы", image: tutorialsImage, vc: TutorialsViewController())
         let add = self.createNav(with: "Добавить", image: addImage, vc: AddViewController())
         let explore = self.createNav(with: "Для вас", image: exploreImage, vc: ExploreViewController())
@@ -52,8 +52,11 @@ class TabBarController: UITabBarController {
     
     private func createNav(with title: String, image: UIImage?, vc: UIViewController) -> UINavigationController {
         let nav = UINavigationController(rootViewController: vc)
+        nav.viewControllers.first?.navigationItem.backButtonTitle = ""
         nav.tabBarItem.title = title
         nav.tabBarItem.image = image
+        nav.navigationBar.tintColor = Colors.black.uiColor
+        
 //        nav.viewControllers.first?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "next", style: .plain, target: nil, action: nil)
 //        nav.viewControllers.first?.navigationItem.title = title
         return nav
